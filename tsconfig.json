@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "Node16",               // ✅ ここが今回のポイント！
+    "module": "Node16",
     "jsx": "react-jsx",
-    "moduleResolution": "Node16",     // ✅ これとセットで必要！
+    "moduleResolution": "Node16",
+    "allowImportingTsExtensions": true, // ✅ これが今回のポイント！
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
