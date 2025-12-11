@@ -21,6 +21,18 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // ✅ JSXを使えるようにする！
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}
   },
   "include": ["src"]
 }
