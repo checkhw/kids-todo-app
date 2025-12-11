@@ -7,10 +7,17 @@ import React from "react";
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
-const todosByDate = {
+  const handleDateChange = (value: any) => {
+  if (value instanceof Date) {
+    setSelectedDate(value);
+  }
+};
+
+const todosByDate: Record<string, string[]> = {
   "2025-12-11": ["宿題をやる", "おもちゃを片付ける"],
   "2025-12-12": ["絵を描く", "お手伝いをする"],
 };
+
 
 const formattedDate = selectedDate.toISOString().split("T")[0];
 const todaysTodos = todosByDate[formattedDate] || [];
@@ -39,9 +46,11 @@ const todaysTodos = todosByDate[formattedDate] || [];
     <p>まだ何もありません</p>
   ) : (
     <ul>
-      {todaysTodos.map((todo, index) => (
-        <li key={index}>{todo}</li>
-      ))}
+{todaysTodos.map((todo: string, index: number) => (
+  <li key={index}>{todo}</li>
+))}
+<Calendar onChange={handleDateChange} value={selectedDate} />
+
     </ul>
   )}
 </section>
