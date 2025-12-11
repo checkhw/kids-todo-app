@@ -3,13 +3,11 @@
     "target": "ESNext",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "moduleResolution": "Node",
+    "moduleResolution": "node16",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
-    "moduleResolution": "Node", // ← これを "node16" に変更！
-
   },
   "include": ["src"]
 }
