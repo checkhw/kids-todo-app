@@ -4,7 +4,8 @@
     "module": "Node16",
     "jsx": "react-jsx",
     "moduleResolution": "Node16",
-    "allowImportingTsExtensions": true, // ✅ これが今回のポイント！
+    "allowImportingTsExtensions": true,
+    "noEmit": true, // ✅ これを追加することでエラー回避！
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
